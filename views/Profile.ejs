@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <%- include ('partials/nav')%>
+    <h1>Welcome to the profile of ejs  <%= person %> </h1>
+    <p><strong>Age:</strong><%= data.age %></p>
+    <p><strong>Designation:</strong><%= data.Designation %></p>
+    <h2><strong>Hobbies:</strong> </h2>
+    <ul><% data.Hobbies.forEach(function(item){%>
+       <li><%= item %></li>
+      <% }); %>
+    </ul>
+</body>
+</html>
