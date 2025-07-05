@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <link rel="stylesheet" href="/stuff/Style.css">
 </head>
 <body>
     <%- include ('partials/nav')%>
     <h1>This is the Homepage : Welcome</h1>
+    <form method="post" action="/contact">
+        <label>Whom do you want to contact?</label><br>
+        <input type="text" name="person" value="<%=  qs.person %>" /><br>
+        <label>Which course?</label><br>
+        <input type="text" name="course" value="<%= qs.course %>" /><br>
+        <label>Enter your Email</label><br>
+        <input type="email" name="email" value="<%= qs.email %>" /><br>
+        <button>Submit</button>
+    </form>
 </body>
 </html>
